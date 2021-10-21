@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template:
+    "left-top right-top" 30%
+    "left-bottom right-bottom" 70%
+    /30% 70%;
+}
+.left-top {
+  grid-area: left-top;
+  background-color: #573f2e;
+}
+.right-top {
+  grid-area: right-top;
+  background-color: #3e2d21;
+}
+
+.left-bottom {
+  grid-area: left-bottom;
+  background-color: #faeded;
+}
+.right-bottom {
+  grid-area: right-bottom;
+}
+.right-bottom-1 {
+  height: 70%;
+  background-color: #6a4021;
+}
+.right-bottom-2 {
+  height: 30%;
+  background-color: #3e2d21;
+}
