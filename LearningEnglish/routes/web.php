@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +26,6 @@ Route::get('/timeline', 'NoteController@showNotePage')->name('timeline');
 Route::post('/timeline', 'NoteController@postNote');
 
 Route::post('/timeline/delete/{id}', 'NoteController@destroy')->name('destroy');
+
+Route::get('/comments/create/{post_id}', 'CommentController@create')->name('comments.create');
+// Route::post('/comments', 'CommentController@store')->name('comments.store');

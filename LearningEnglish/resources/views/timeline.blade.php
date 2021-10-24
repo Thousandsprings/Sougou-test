@@ -21,9 +21,11 @@
                 <div class="note-box">
                     <div class="user-nickname">{{ $note->user->nickname }}</div>
                     <div class="note-content">{{ $note->note }}</div>
-                        <form>
-                        <input type="submit" value='Comment'>
-                        </form>
+                        <a href="{{ route('comments.create', $note->id) }}">
+                         <form>
+                          <input type="submit" value='Comment'>
+                         </form>
+                        </a>
                     <div class="destroy-btn">
                       @if($note->user_id == Auth::user()->id)
                         <form action="{{ route('destroy', [$note->id]) }}" method='post'>
