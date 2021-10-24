@@ -25,5 +25,3 @@ Route::get('/timeline', 'NoteController@showNotePage')->name('timeline');
 Route::post('/timeline', 'NoteController@postNote');
 
 Route::post('/timeline/delete/{id}', 'NoteController@destroy')->name('destroy');
-
-Route::get('/user/show/{id}', 'UserController@showHistory')->name('show');
