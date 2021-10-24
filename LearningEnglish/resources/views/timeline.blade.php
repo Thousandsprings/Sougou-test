@@ -19,7 +19,7 @@
         <div class="note-wrapper">
             @foreach($notes as $note)
                 <div class="note-box">
-                    <div class="user-name">{{ $note->user->nickname }}</div>
+                    <a href="{{ route('show', [$note->user->id]) }}"><div class="user-nickname">{{ $note->user->nickname }}</div></a>
                     <div class="note-content">{{ $note->note }}</div>
                     <div class="destroy-btn">
                       @if($note->user_id == Auth::user()->id)
