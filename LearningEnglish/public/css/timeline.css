@@ -1,0 +1,63 @@
+body {
+    height: 100%;
+    background-color: rgb(112, 182, 240);
+}
+
+.wrapper {
+    width: 50%;
+    height: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.post-box {
+    background-color: orange;
+    text-align: center;
+}
+
+.post-box > input {
+    margin: 1rem;
+    padding: 0 1rem;
+    width: 80%;
+    border: 1px solid #cccccc;
+    height: 24px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px cadetblue;
+}
+
+.submit-btn {
+    background-color: #ffffff;
+    color: blue;
+    border-radius: 15px;
+    border: 1px solid blue;
+    box-shadow: 1px 1px 5px cadetblue;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.note-box {
+    padding: 10px 10px 10px 10px;
+    border-bottom: solid 1px gray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.note-box > div {
+    width: 50%;
+}
+
+.user-name {
+    border: solid 1px gray;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px;
+    font-size: x-small;
+}
+
+.note-content {
+    padding-left: 15px;
+}
+.destroy-btn {
+    text-align: right;
+}
