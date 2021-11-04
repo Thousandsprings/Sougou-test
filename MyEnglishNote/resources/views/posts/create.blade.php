@@ -1,4 +1,4 @@
-@extends('layout.app_original') 
+@extends('layouts.app_original') 
 {{-- layoutのなかのapp_original.bladeファイルを参照するという意味 --}}
 @section('content')
 {{-- どこかどこまでを参照するか --}}
