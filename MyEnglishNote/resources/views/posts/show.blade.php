@@ -5,13 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card mt-3">
-                <div class="card-header">
-                    <h5>タイトル：</h5>
-                </div>
+                
                 <div class="card-body">
-                <p class="card-text">内容：</p>
-                <p>投稿日時：</p>
-                <a href="#" class="btn btn-primary">編集する</a>
+                <p class="card-text">内容：{{ $post->body }}</p>
+                <p>投稿日時：{{ $post->created_at }}</p>
+                <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-primary">編集する</a>
                 <form action='#' method='post'>
                     <input type='submit' value='削除' class="btn btn-danger" onclick='return confirm("本当に削除しますか？");'>
                 </form>
