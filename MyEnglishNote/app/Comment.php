@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Comment extends Model
 {
-    function comments()
+    function post()
     {
-        return $this->hasMany('App\Comment');
+        return $this->belongsTo('App\Post');
     }
 
     function user()
