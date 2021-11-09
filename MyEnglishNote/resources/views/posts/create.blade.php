@@ -15,7 +15,7 @@
                   <textarea class="form-control" placeholder="内容" rows="5" name="body">
                   </textarea>
               </div>
-              <button type="submit" class="btn btn-primary">作成</button>
+              <button type="submit" class="btn btn-primary" >作成</button>
           </form>
       </div>
   </div>

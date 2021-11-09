@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post; //Postモデルを使う宣言
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -13,7 +13,9 @@ class PostController extends Controller
     {
         //postsテーブルから全部のデータを取ってくる
         $posts = Post::all();
-
+        $posts = Post::latest()->get();
+        //latest()関数で最新のポストを一番上に表示する
+        // dd($posts);
         //Post=Post.php
         return view('posts.index', compact('posts'));
         //  compact（)＝$postsをviewで表示させることができるようにする
@@ -22,6 +24,7 @@ class PostController extends Controller
 
     function create()
     {
+
         return view('posts.create');
         //create.blade.phpが表示される
     }
@@ -46,6 +49,7 @@ class PostController extends Controller
     {
         // dd($id); idの番号が出る
         $post = Post::find($id);
+
 
         return view('posts.show', ['post' => $post]);
     }
