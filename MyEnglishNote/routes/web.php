@@ -43,7 +43,7 @@ Route::delete('/posts/{id}', 'PostController@destroy')->name('posts.destroy');
 
 Route::get('/comments/create/{post_id}', 'CommentController@create')->name('comments.create');
 
-Route::post('/comments//create', 'CommentController@store')->name('comments.store');
+Route::post('/comments/create', 'CommentController@store')->name('comments.store');
 
 //create likes
 Route::get('posts/{post_id}/likes', 'LikeController@store');

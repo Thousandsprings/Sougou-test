@@ -31,6 +31,8 @@ class PostController extends Controller
 
     function store(Request $request)
     {
+        // dd($request->all());
+
         // $request に入っている値をnew Postでデータベースに保存するという記述
         $post = new Post;
 

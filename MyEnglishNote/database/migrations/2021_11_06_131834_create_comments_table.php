@@ -15,12 +15,13 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->test("body");
+            $table->text("body");
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('post_id');
-            $table->foreign('user_id')->references('id')->on('users'); //userテーブルのidを参照しながらuser-idを外部キーとして連携する
-            $table->foreign('post_id')->references('id')->on('posts');
+            $table->unsignedBigInteger('comment_id');
+
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
             $table->timestamps();
         });
     }
@@ -32,6 +33,7 @@ class CreateCommentsTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('users');
         Schema::dropIfExists('comments');
     }
 }

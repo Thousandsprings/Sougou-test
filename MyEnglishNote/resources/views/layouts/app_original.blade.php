@@ -17,7 +17,7 @@
         <div class="header-right">
         <div class="dropdown nav">
           <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-          {{ Auth::user()->name }}
+            {{ Auth::user()->name }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();

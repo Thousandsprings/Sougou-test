@@ -9,12 +9,12 @@ class Like extends Model
     //
     public function user()
     {
-        return $this->belingsTo('App\User');
+        return $this->belongsTo('App\User');
     }
 
     public function post()
     {
-        return $this->belingsTo('App\Post');
+        return $this->belongsTo('App\Post');
     }
 
     public function commment()
