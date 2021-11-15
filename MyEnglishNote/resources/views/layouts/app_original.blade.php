@@ -14,6 +14,7 @@
 <body>
   <header>
     <div class="header-left">
+            <a href="{{ url('/') }}" class="btn btn-primary return">Top</a>
             <a href="{{ route('posts.index', $post->id) }}" class="btn btn-primary return">一覧へ戻る</a>
         </div>
         <div class="header-right">

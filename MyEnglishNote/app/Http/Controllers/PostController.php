@@ -15,7 +15,7 @@ class PostController extends Controller
     {
         //postsテーブルから全部のデータを取ってくる
         $posts = Post::all();
-        $posts = Post::latest()->get();
+        $posts = Post::latest()->paginate(3);
         //latest()関数で最新のポストを一番上に表示する
         // dd($posts);
         //Post=Post.php

@@ -30,6 +30,7 @@
               投稿日時 : {{ $post->created_at }}
           </div>
           @endforeach
+          {{ $posts->links() }}
       </div>
       </div>
       <div class="col-md-2">
