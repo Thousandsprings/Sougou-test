@@ -13,12 +13,11 @@
       {{-- サニタイジング防止 --}}
     
       <div class="form-group">
-          <label>内容</label>
-          <textarea class="form-control" placeholder="内容" rows="5" name="body">
-          </textarea>
+          <label>What did you learn?</label>
+          <textarea class="form-control" rows="5" name="body"></textarea>
       </div>
   
-      <button type="submit" class="btn btn-primary">作成</button>
+      <button type="submit" class="btn btn-primary">Create Note</button>
         
    
   </form>
