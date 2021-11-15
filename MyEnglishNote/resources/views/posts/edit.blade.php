@@ -12,6 +12,7 @@
                   <textarea class="form-control" rows="5" name="body">{{ $post->body }}</textarea>
               </div>
               <button type="submit" class="btn btn-primary">更新する</button>
+              
           </form>
       </div>
   </div>

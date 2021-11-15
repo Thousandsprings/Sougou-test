@@ -19,4 +19,11 @@ class LikeController extends Controller
 
         return redirect()->route('posts.index');
     }
+
+    public function destroy(Request $request)
+    {
+        $like = Like::find($request->like_id); //likeテーブルに接続
+        $like->delete();
+        return redirect()->route('posts.index');
+    }
 }

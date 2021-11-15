@@ -15,10 +15,10 @@
                   <form action='{{ route('posts.destroy',$post->id) }}' method='post'>
                     @csrf
                     @method('delete')
-                    <input type='submit' value='削除' class="btn btn-danger" onclick='return confirm("本当に削除しますか？");'>
+                    <input type='submit' value='削除' class="btn btn-danger" onclick='return confirm("本当に削除しますか？")'>
                   </form>
                   @endif
-                  <a href="{{ route('posts.index', $post->id) }}" class="btn btn-primary">一覧へ戻る</a>
+                 
                   
                 </div>
             </div>

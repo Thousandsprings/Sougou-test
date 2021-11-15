@@ -11,14 +11,17 @@
           @foreach($posts as $post)
           <div class="card-body">
               <p class="card-text">
-                内容 : {{ $post->body }}
+                内容 : {{Str::limit($post->body, 10, '(…)' )}}
               </p>
               <div style="padding:10px 40px">
                 @if($post->likedBy(Auth::user())->count()>0)
-                <a href="/likes/{{ $post->likedBy(Auth::user())->firstOrfail()->id }}">いいね取り消し</a>
+                {{-- いいねを取り消す --}}
+                <a href="/likes/{{ $post->likedBy(Auth::user())->firstOrfail()->id }}"><i class="fas fa-grin-hearts"></i></a>
                 @else
-                <a href="/posts/{{ $post->id }}/likes">いいね</a>
+                {{-- いいね --}}
+                <a href="/posts/{{ $post->id }}/likes"><i class="far fa-meh-blank"></i></a>
                 @endif
+                {{ $post->likes->count() }}
               </div>
               <p class="card-text">投稿者：{{ $post->user->name }}</p>
               <a href="{{  route('posts.show', $post->id) }}" class="btn btn-primary">詳細へ</a>

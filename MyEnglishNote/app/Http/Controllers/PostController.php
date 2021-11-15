@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use App\Post; //Postモデルを使う宣言
 use Illuminate\Support\Facades\Auth;
 
+
 class PostController extends Controller
 {
+
     //
     function index()
     {
@@ -22,16 +24,23 @@ class PostController extends Controller
         // または['posts'=>$posts]
     }
 
-    function create()
+    function create(Request $request)
     {
+        // dd($request);
+        $post = new Post;
+        $post->body = $request->body;
 
-        return view('posts.create');
+
+        return view('posts.create', compact('post'));
+
         //create.blade.phpが表示される
     }
 
+
     function store(Request $request)
     {
-        // dd($request->all());
+        // dd($request->body);
+
 
         // $request に入っている値をnew Postでデータベースに保存するという記述
         $post = new Post;
@@ -43,7 +52,13 @@ class PostController extends Controller
 
         $post->save();
 
-        return redirect()->route('posts.index');
+        if ($post->body !== null) {
+
+            return redirect()->route('posts.index');
+        } else {
+
+            return redirect()->route('posts.create');
+        }
     }
 
     // $idはindex.blade.phpから送られたid

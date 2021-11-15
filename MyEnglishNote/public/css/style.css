@@ -48,3 +48,17 @@ footer {
     background-color: rgb(106, 64, 33);
     border-color: rgb(106, 64, 33);
 }
+
+.fa-grin-hearts {
+    color: rgb(231, 112, 132);
+    font-size: large;
+}
+
+.fa-meh-blank {
+    font-size: large;
+}
+
+.return {
+    background-color: rgb(235, 140, 155);
+    border: none;
+}
